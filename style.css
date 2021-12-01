@@ -5,6 +5,9 @@
 	--main-color: #5D9AB2;
 	--dark-main-color: #2B5566;
 	--text-bright-color: #fff;
+	--icon-color: #fff;
+	--icon-bk-color: #ddd;
+	--large-width: 1000px;
 }
 
 body {
@@ -12,6 +15,7 @@ body {
 	margin: 0;
 }
 
+/* contents A */
 .conA {
 	display: flex;
 	align-items: center;
@@ -64,6 +68,111 @@ body {
 	background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2));
 }
 
+/* contents B */
+.conB .container {
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.conB .text {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+.conB h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conB p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conB a {
+	color: #5D9AB2;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.conB a:hover	{
+	text-decoration: underline;
+}
+
+.conB .icon	{
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 40px;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #ddd;
+	background-color: var(--icon-bk-color);
+	color: #fff;
+	color: var(--icon-color);
+}
+
+/* contents C */
+.conC {
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+
+.conC .text {
+	padding: 20px;
+}
+
+.conC h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conC p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conC a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conC a:hover	{
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+	);
+}
+
+.conC .photo {
+	min-height: 200px;
+	background-image: url(img/note.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
 @media (min-width: 768px) {
 	.conA h1 {
 		font-size: 115px;
@@ -71,5 +180,33 @@ body {
 
 	.conA p {
 		font-size: 24px;
+	}
+
+	.conB .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.conB .text	{
+		flex: 1;
+	}
+	
+	.conC .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.conC .photo {
+		flex: 3;
+	}
+
+	.conC .text {
+		flex: 2;
+		padding: 50px;
 	}
 }
