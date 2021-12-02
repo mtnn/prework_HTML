@@ -289,6 +289,41 @@ footer .container {
 	background-color: rgba(0,0,0,0.3);
 }
 
+.footC {
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footD {
+	margin-top: 20px;
+}
+
+.footD ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footD a {
+	display: block;
+	margin-right: 8px;
+	padding: 0;
+	color: inherit;
+	font-size: 16px;
+	text-decoration: none;
+	border: solid 1px currentColor;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footD a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
 /* responsive */
 @media (min-width: 768px) {
 	.conA h1 {
@@ -357,5 +392,26 @@ footer .container {
 
 	.footB div:not(:first-child) {
 		margin-left: 40px;
+	}
+
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footA {
+		flex: 0 0 40%;
+	}
+
+	.footB {
+		flex: 0 0 60%;
+	}
+
+	.footC {
+		flex: 0 0 100%;
 	}
 }
